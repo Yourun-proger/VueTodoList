@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue.js To Do List</title>
+    <script src="vue.js"></script>
+    <script src="vueScript.js"></script>
+    <link rel="stylesheet" href="styled.css">
+</head>
+<body>
+<div id="todo-list-example" class="block">
+    <img src="logo.png">
+  <form v-on:submit.prevent="addNewTodo">
+    <label for="new-todo"><span style="color: #41b883">Vue.js</span> To Do List</label>
+    <input
+      v-model="newTodoText"
+      id="new-todo"
+      placeholder="input item"
+    >
+    <button>+</button>
+  </form>
+    <div
+      is="todo-item"
+      v-for="(todo, index) in todos"
+      v-bind:key="todo.id"
+      v-bind:title="todo.title"
+      @remove="todos.splice(index, 1)"
+    ></div>
+</div>
+</body>
+</html>
