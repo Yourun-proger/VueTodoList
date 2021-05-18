@@ -10,7 +10,7 @@
 <body>
 <div id="todo-list-example" class="block">
     <img src="logo.png">
-  <form v-on:submit.prevent="addNewTodo">
+  <form @submit.prevent="addNewTodo">
     <label for="new-todo"><span style="color: #41b883">Vue.js</span> To Do List</label>
     <input
       v-model="newTodoText"
