@@ -6,7 +6,7 @@ Vue.component('todo-item', {
   `,
   props: ['title']
 })
-window.onload = function(){
+var app = 
     new Vue({
       el: '#todo-list-example',
       data: {
@@ -24,4 +24,3 @@ window.onload = function(){
         }
       }
     })
-}
