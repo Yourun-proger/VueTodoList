@@ -6,8 +6,7 @@ Vue.component('todo-item', {
   `,
   props: ['title']
 })
-var app = 
-    new Vue({
+var app = new Vue({
       el: '#todo-list-example',
       data: {
         newTodoText: '',
